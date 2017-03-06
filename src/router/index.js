@@ -8,6 +8,7 @@ const swiperTimer = resolve => require(['@/common/vue/swiperTimer/swiperTimer'],
 const screenShot = resolve => require(['@/common/vue/screenShot/screenShot.vue'], resolve);
 
 export default new Router({
+  mode: 'history',
   routes: [
 
     {

@@ -1,7 +1,5 @@
 <template>
 <div class="screenShotContent">
-  <br />
-  本页面用于演示牛牛截图控件的功能及使用方法，使用者可以参考此页面的javascript实现来进行牛牛截图控件的调用。
   <div style="height:5px;"></div>
   <div id="ctlDiv">
     <a id="btnCapture" href="javascript:StartCapture()" class="btn">屏幕截图</a>
@@ -25,7 +23,6 @@
       height:<input class="inputtext" type="input" id="height"  value="150"></input>
     </div>
   </div>
-  <div class="log" id="logInfo">请点击上面的按钮开始进行屏幕截图&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a target="_blank" style="color:#ff0000;" href="http://shang.qq.com/wpa/qunwpa?idkey=a9dab7a14df03d19a2833e6b5f17a33639027d06213cf61bdb7554b04492b6e5">加群讨论</a></div>
 
   <div style="padding-left:20px;"><span id="info"></span></div>
   <div style="padding-left:20px;"><span id="show"></span><a id="btnUpload" href="javascript:UploadData()" class="btn">上传截图</a></div>
@@ -85,7 +82,6 @@
 <style type="text/css" scoped>
   label{font-size:12px;}
   h3{float:right;margin:4px 30px;line-height:40px;}
-  .log{background-color:#eee;border:1px solid #999;height:30px;line-height:30px;font-size:12px;padding:2px 20px;}
   #snapImg{border:1px solid #666;margin-top:10px;height:650px;overflow:auto; text-align:center;}
   .btn{border:1px solid #3079ED;background-color:#498AF4;color:#ffffff;line-height:40px;font-weight:bold; text-decoration:none; text-align:center;padding:5px 20px;}
   .btn:hover{background-color:#3B80EE}

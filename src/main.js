@@ -5,12 +5,11 @@ import App from './App'
 import router from './router'
 import './common/css/reset.css'
 import './common/css/style.css'
+import store from './store/index'
 Vue.config.productionTip = false
-
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
-  template: '<App/>',
-  components: { App }
-})
+  store,
+  render: h => h(App),
+}).$mount('#app')
