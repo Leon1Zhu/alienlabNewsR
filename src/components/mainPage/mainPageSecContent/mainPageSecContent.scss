@@ -1,0 +1,43 @@
+.main-page-sec-content{
+  position: relative;
+  /*height:30%;*/
+  width:100%;
+  display: flex;
+  background: #ececec;
+  .sec-left-content,.sec-right-content{
+    font-family: 微软雅黑;
+    padding:5%;
+    height:100%;
+    position: relative;
+    width:50%;
+  }
+  .sec-content-top{
+    color: rgba(0,0,0,0.8);
+  }
+  .sec-content-below{
+    width:50%;
+    margin-top:5%;
+    color: rgba(0,0,0,0.7);
+  }
+
+}
+/*响应式*/
+@media (min-width: 720px) {
+
+}
+
+@media (min-width: 1080px) {
+
+}
+
+@media (min-width: 1366px) {
+
+}
+
+@media (min-width: 1680px) {
+
+}
+
+@media (min-width: 1920px) {
+
+}

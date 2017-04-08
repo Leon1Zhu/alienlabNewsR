@@ -1,0 +1,152 @@
+html,body,#app{
+    position: relative;
+    width:100%;
+    height:100%;
+    font-family:sans-serif;
+}
+.fullScreenClass{
+  position: relative;
+  width:100%;
+  height:100%;
+}
+
+.animateClass-child>*{
+  -webkit-transition: all .3s ease-in-out 0s;
+  -moz-transition: all .3s ease-in-out 0s;
+  -ms-transition: all .3s ease-in-out 0s;
+  -o-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+
+
+.animateClass{
+  -webkit-transition: all .3s ease-in-out 0s;
+  -moz-transition: all .3s ease-in-out 0s;
+  -ms-transition: all .3s ease-in-out 0s;
+  -o-transition: all .3s ease-in-out 0s;
+  transition: all .3s ease-in-out 0s;
+}
+.font-size-maintitle{
+  font-size:30px;
+}
+.font-size-top{
+  font-size:20px;
+}
+.font-size-title{
+  font-size:18px;
+}
+.font-size-body{
+  font-size:15px;
+}
+.font-size-sup{
+  font-size:13px;
+}
+
+/*响应式*/
+@media (min-width:720px) {
+  .font-size-maintitle{
+    font-size:30px;
+  }
+  .font-size-top{
+    font-size:20px;
+  }
+  .font-size-title{
+    font-size:18px;
+  }
+  .font-size-body{
+    font-size:15px;
+  }
+  .font-size-sup{
+    font-size:13px;
+  }
+  .title-li{
+    padding-left:3px;
+    padding-right:3px;
+  }
+
+}
+
+@media (min-width:1080px) {
+  .font-size-maintitle{
+    font-size:33px;
+  }
+  .font-size-top{
+    font-size:23px;
+  }
+  .font-size-title{
+    font-size:20px;
+  }
+  .font-size-body{
+    font-size:17px;
+  }
+  .font-size-sup{
+    font-size:14px;
+  }
+  .title-li{
+    padding-left:13px;
+    padding-right:13px;
+  }
+
+}
+
+@media (min-width:1366px) {
+  .font-size-maintitle{
+    font-size:35px;
+  }
+  .font-size-top{
+    font-size:24px;
+  }
+  .font-size-title{
+    font-size:21px;
+  }
+  .font-size-body{
+    font-size:18px;
+  }
+  .font-size-sup{
+    font-size:15px;
+  }
+  .title-li{
+    padding-left:12px;
+    padding-right:12px;
+  }
+}
+
+
+@media (min-width:1680px) {
+  .font-size-maintitle{
+    font-size:43px;
+  }
+  .font-size-top{
+    font-size:29px;
+  }
+  .font-size-title{
+    font-size:26px;
+  }
+  .font-size-body{
+    font-size:22px;
+  }
+  .font-size-sup{
+    font-size:18px;
+  }
+}
+
+
+
+
+@media (min-width:1920px) {
+  .font-size-maintitle{
+    font-size:50px;
+  }
+  .font-size-top{
+    font-size:32px;
+  }
+  .font-size-title{
+    font-size:28px;
+  }
+  .font-size-body{
+    font-size:24px;
+  }
+  .font-size-sup{
+    font-size:20px;
+  }
+}

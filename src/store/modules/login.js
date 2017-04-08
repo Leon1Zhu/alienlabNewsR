@@ -6,28 +6,23 @@ import loginFun from '../../api/index'
 import * as types  from '../mutations-types'
 
 const  state = {
-  token : localStorage.getItem("token") || null
+  isLogin : false
 }
 
 
 const getters = {
-  getToken: state => state.token
+  getLoginStatus: state => state.isLogin
 }
 
 const mutations = {
-  [types.USER_SINGIN](state,token){
-    localStorage.setItem("token",token);
-    state.token = user;
+  [types.LOGIN_STATUS](state,flag){
+    state.isLogin = flag;
   }
 }
 
 const actions = {
-  Login ({ commit },data) {
-    loginFun.LoginService(data).then(function (response) {
-      commit(USER_SINGIN)
-    }).catch(function (response) {
-
-    })
+  setLoginStatus ({ commit },flag) {
+      commit(types.LOGIN_STATUS,flag)
   }
 
 }

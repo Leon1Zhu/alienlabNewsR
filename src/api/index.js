@@ -6,12 +6,19 @@ import Vue from 'vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios,axios)
+Vue.prototype.$http = axios
+/*Vue.prototype.$Interceptor = function(token){
+  axios.interceptors.request.use(
+    config => {
+      console.log(config)
+        config.headers.Authorization = token;
+      return config;
+    },
+    err => {
+      return Promise.reject(err);
+    });
+}*/
 
-var instance = axios.create();
-
-if(localStorage.getItem('token')){
-  instance.default.headers.common['Authorization']= 'Bearer ' + localStorage.getItem('token').replace(/(^\")|(\"$)/g, '');
-}
 
 export default {
     LoginService: function(data){

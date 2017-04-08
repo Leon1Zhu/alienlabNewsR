@@ -6,13 +6,17 @@ Vue.use(Router)
 const notFound = resolve => require(['@/components/404'], resolve);
 const swiperTimer = resolve => require(['@/common/vue/swiperTimer/swiperTimer'], resolve);
 const screenShot = resolve => require(['@/common/vue/screenShot/screenShot.vue'], resolve);
+const mainPage = resolve => require(['@/components/mainPage/mainPageContent'], resolve);
 
 export default new Router({
   mode: 'history',
   routes: [
-
     {
       path: '/',
+      component: mainPage
+    },
+    {
+      path: '/screenShot',
       component: screenShot
     },
     {
