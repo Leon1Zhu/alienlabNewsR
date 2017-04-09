@@ -6,10 +6,15 @@
   background: #ececec;
   .sec-left-content,.sec-right-content{
     font-family: 微软雅黑;
-    padding:5%;
+    margin:5%;
+    margin-left:1%;
     height:100%;
     position: relative;
     width:50%;
+  }
+  .sec-left-content{
+    display: flex;
+    justify-content: flex-end;
   }
   .sec-content-top{
     color: rgba(0,0,0,0.8);

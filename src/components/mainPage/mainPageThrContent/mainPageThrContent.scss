@@ -1,8 +1,10 @@
 .main-thr-content{
+  display: inline-block;
   width:100%;
   position: relative;
+  height:40%;
   .thr-title{
-    margin-top:7%;
+    margin-top:5%;
     text-align: center;
     .straight{
       color: white;
