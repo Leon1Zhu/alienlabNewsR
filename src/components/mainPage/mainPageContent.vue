@@ -21,6 +21,7 @@
     </div>
     <secContent></secContent>
     <thrContent></thrContent>
+    <fouContent></fouContent>
 
   </div>
 </template>
@@ -29,6 +30,7 @@
   import  './mainPageContent.scss'
   import secContent from './mainPageSecContent/mainPageSecContent.vue'
   import thrContent from './mainPageThrContent/mainPageThrContent.vue'
+  import fouContent from './mainPageFouContent/mainPageFoucontent.vue'
   import swiper from '../../common/vue/swiperTimer/swiperTimer.vue'
     export default{
         data(){
@@ -41,6 +43,7 @@
       components: {
           "secContent":secContent,
           "thrContent":thrContent,
+          "fouContent":fouContent,
           "swiper":swiper,
       },
     }

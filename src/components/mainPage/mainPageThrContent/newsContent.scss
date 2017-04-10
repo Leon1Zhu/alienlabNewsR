@@ -1,0 +1,130 @@
+.news-content{
+  width:630px;
+  margin:0 auto;
+  .swiper-pagination-clickable{
+    cursor: default;
+  }
+  .swiper-content{
+    .news-card{
+      height:213px;
+      width:153px!important;
+      cursor: default;
+      .news-top-content,.news-below-content{
+        cursor: pointer;
+      }
+      .news-below-content{
+        padding:10px 0px 10px 5px;
+        margin-top:-2px;
+        background: #f9f9f8;
+        display: flex;
+        .left-content,.right-content{
+          width:50%;
+        }
+        .news-left-content{
+          flex:1 1 60%;
+        }
+        .news-time{
+          padding-top:5px;
+          color: #dbdcdb;
+        }
+        .news-name{
+            color: rgba(0,0,0,0.6);
+        }
+      }
+      .news-top-img{
+        width: 150px;
+        height: 120px;
+      }
+      .right-collect-content{
+        text-align: right;
+        padding-right:5px;
+        .icon-xingxing01{
+          color: #e6dacf;
+          cursor: pointer;
+        }
+        .news-collect-count{
+          padding-top:5px;
+          color: #e6dacf;
+        }
+      }
+    }
+  }
+  .mypagination{
+    width: 20px;
+    height:4px;
+    background: #ececec;
+    border-radius: 0px;
+  }
+  /*响应式*/
+  @media (min-width: 720px) {
+    width: 500px;
+    .swiper-content {
+      .news-card {
+        height: 213px;
+        width: 153px!important;
+        .news-top-img {
+          width: 153px;
+          height: 113px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1080px) {
+    width: 600px;
+    .swiper-content {
+      .news-card {
+        height: 235px;
+        width: 180px!important;
+        .news-top-img {
+          width: 180px;
+          height: 130px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1366px) {
+    width: 800px;
+    .swiper-content {
+      .news-card {
+        height: 290px;
+        width: 253px!important;
+        .news-top-img {
+          width: 253px;
+          height: 180px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1680px) {
+    width: 1000px;
+    .swiper-content {
+      .news-card {
+        height: 350px;
+        width: 320px!important;
+        .news-top-img {
+          width: 320px;
+          height: 230px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    width: 1200px;
+    .swiper-content {
+      .news-card {
+        height: 400px;
+        width: 386px!important;
+        .news-top-img {
+          width: 386px;
+          height: 280px;
+        }
+      }
+    }
+  }
+}
+
+

@@ -39,13 +39,16 @@ html,body,#app{
   font-size:20px;
 }
 .font-size-title{
-  font-size:18px;
+  font-size:16px;
 }
 .font-size-body{
-  font-size:15px;
+  font-size:12px;
 }
 .font-size-sup{
-  font-size:13px;
+  font-size:8px;
+}
+.font-size-minsup{
+  font-size:4px;
 }
 
 /*响应式*/
@@ -57,13 +60,16 @@ html,body,#app{
     font-size:20px;
   }
   .font-size-title{
-    font-size:18px;
+    font-size:16px;
   }
   .font-size-body{
-    font-size:15px;
+    font-size:12px;
   }
   .font-size-sup{
-    font-size:13px;
+    font-size:8px;
+  }
+  .font-size-minsup{
+    font-size:4px;
   }
   .title-li{
     padding-left:3px;
@@ -80,13 +86,16 @@ html,body,#app{
     font-size:23px;
   }
   .font-size-title{
-    font-size:20px;
+    font-size:19px;
   }
   .font-size-body{
-    font-size:17px;
+    font-size:15px;
   }
   .font-size-sup{
-    font-size:14px;
+    font-size:11px;
+  }
+  .font-size-minsup{
+    font-size:7px;
   }
   .title-li{
     padding-left:13px;
@@ -103,13 +112,16 @@ html,body,#app{
     font-size:24px;
   }
   .font-size-title{
-    font-size:21px;
+    font-size:20px;
   }
   .font-size-body{
-    font-size:18px;
+    font-size:16px;
   }
   .font-size-sup{
-    font-size:15px;
+    font-size:12px;
+  }
+  .font-size-minsup{
+    font-size:8px;
   }
   .title-li{
     padding-left:12px;
@@ -126,13 +138,16 @@ html,body,#app{
     font-size:29px;
   }
   .font-size-title{
-    font-size:26px;
+    font-size:25px;
   }
   .font-size-body{
-    font-size:22px;
+    font-size:21px;
   }
   .font-size-sup{
-    font-size:18px;
+    font-size:17px;
+  }
+  .font-size-minsup{
+    font-size:13px;
   }
 }
 
@@ -154,5 +169,8 @@ html,body,#app{
   }
   .font-size-sup{
     font-size:20px;
+  }
+  .font-size-minsup{
+    font-size:16px;
   }
 }

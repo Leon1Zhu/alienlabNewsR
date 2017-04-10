@@ -8,6 +8,8 @@ import './common/css/style.scss'
 import './common/font/iconfont.css'
 import './global'
 import store from './store/index'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

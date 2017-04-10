@@ -1,6 +1,7 @@
 #header{
   z-index:1;
   position: absolute;
+  top:0px;
   height:70px;
   display: flex;
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
@@ -54,118 +55,191 @@
     background: rgba(255,255,255,0.3);
     cursor: pointer;
   }
-
-  /*响应式*/
-  @media (min-width:720px) {
-    .title-ul{
-      .title-li{
-        padding-left:3px;
-        padding-right:3px;
+}
+.main-footer{
+  z-index:1;
+  position: relative;
+/*  width:100%;*/
+  background: #212223;
+  padding:10px 15px;
+  display: flex;
+  .footer-left-content{
+    flex:1 1 70%;
+  }
+  .footer-right-content{
+    flex:1 1 30%;
+  }
+  .chi-left-content{
+    margin:0 auto;
+    width:60%;
+  }
+  .main-footer-logo{
+    padding:5% 0px;
+  }
+  .alienlab-info,.alienlab-reference{
+    color: rgba(255,255,255,0.4);
+    line-height: 27px;
+  }
+  .alienlab-reference{
+    padding-top:7%;
+    .alienlab-reference-sec{
+      margin-top:1%;
+    }
+  }
+  .footer-right-content{
+    display: flex;
+    .about-right{
+      margin-left:10%;
+     /* width:30%;*/
+    }
+    .about-title{
+      color: #ececec;
+      margin-top:50%;
+    }
+    .about-body{
+      margin-top:40%;
+      color: rgba(255,255,255,0.4);
+    }
+  }
+}
+/*响应式*/
+@media (min-width:720px) {
+  #header {
+    .title-ul {
+      .title-li {
+        padding-left: 3px;
+        padding-right: 3px;
       }
     }
-    .title-icon{
+    .title-icon {
       width: 183px;
     }
-    .font-size-title-icon{
-      font-size:23px;
+    .font-size-title-icon {
+      font-size: 23px;
     }
-    .font-size-title-icon{
+    .font-size-title-icon {
       padding: 0px 20px 0 20px;
     }
-
   }
-
-  @media (min-width:850px) {
-    .title-icon{
+  .main-footer{
+    .alienlab-info,.alienlab-reference{
+      line-height: 15px;
     }
-
   }
+}
 
-  @media (min-width:1080px) {
-    height:70px;
-    .title-ul{
-      .title-li{
-        padding-left:13px;
-        padding-right:13px;
-        line-height:70px;
+@media (min-width:1080px) {
+  #header {
+    height: 70px;
+    .title-ul {
+      .title-li {
+        padding-left: 13px;
+        padding-right: 13px;
+        line-height: 70px;
       }
     }
-    .title-icon{
-      margin-top:16px;
+    .title-icon {
+      margin-top: 16px;
     }
-    .font-size-title-icon{
-      font-size:26px;
-      line-height:70px;
+    .font-size-title-icon {
+      font-size: 26px;
+      line-height: 70px;
     }
-    .font-size-title-icon{
+    .font-size-title-icon {
       padding: 0px 25px 0 25px;
     }
   }
+  .main-footer{
+    .alienlab-info,.alienlab-reference{
+      line-height: 18px;
+    }
+  }
+}
 
-  @media (min-width:1366px) {
-    height:80px;
-    .title-ul{
-      .title-li{
-        padding-left:15px;
-        padding-right:15px;
-        line-height:80px;
+@media (min-width:1366px) {
+  #header {
+    height: 80px;
+    .title-ul {
+      .title-li {
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 80px;
       }
     }
-    .title-icon{
-      margin-top:21px;
+    .title-icon {
+      margin-top: 21px;
     }
-    .font-size-title-icon{
-      font-size:27px;
-      line-height:80px;
+    .font-size-title-icon {
+      font-size: 27px;
+      line-height: 80px;
     }
-    .font-size-title-icon{
+    .font-size-title-icon {
       padding: 0px 30px 0 30px;
     }
   }
+  .main-footer{
+    .alienlab-info,.alienlab-reference{
+      line-height: 21px;
+    }
+  }
+}
 
 
-  @media (min-width:1680px) {
-    height:90px;
-    .title-ul{
-      .title-li{
-        padding-left:15px;
-        padding-right:15px;
-        line-height:90px;
+@media (min-width:1680px) {
+  #header {
+    height: 90px;
+    .title-ul {
+      .title-li {
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 90px;
       }
     }
-    .title-icon{
-      margin-top:26px;
+    .title-icon {
+      margin-top: 26px;
     }
-    .font-size-title-icon{
-      font-size:30px;
-      line-height:90px;
+    .font-size-title-icon {
+      font-size: 30px;
+      line-height: 90px;
     }
-    .font-size-title-icon{
+    .font-size-title-icon {
       padding: 0px 35px 0 35px;
     }
   }
+  .main-footer{
+    .alienlab-info,.alienlab-reference{
+      line-height: 24px;
+    }
+  }
+}
 
 
 
 
-  @media (min-width:1920px) {
-    height:100px;
-    .title-ul{
-      .title-li{
-        padding-left:15px;
-        padding-right:15px;
-        line-height:100px;
+@media (min-width:1920px) {
+  #header {
+      height: 100px;
+      .title-ul {
+        .title-li {
+          padding-left: 15px;
+          padding-right: 15px;
+          line-height: 100px;
+        }
       }
-    }
-    .title-icon{
-      margin-top:31px;
-    }
-    .font-size-title-icon{
-      font-size:32px;
-      line-height:100px;
-    }
-    .font-size-title-icon{
-      padding: 0px 40px 0 40px;
+      .title-icon {
+        margin-top: 31px;
+      }
+      .font-size-title-icon {
+        font-size: 32px;
+        line-height: 100px;
+      }
+      .font-size-title-icon {
+        padding: 0px 40px 0 40px;
+      }
+  }
+  .main-footer{
+    .alienlab-info,.alienlab-reference{
+      line-height: 27px;
     }
   }
 }
