@@ -4,7 +4,7 @@
       <div class="title-left half-title animateClass-child">
         <div class="title-icon "></div>
         <ul class="title-ul font-size-body animateClass-child">
-          <li class="title-li" v-for="title in titles">{{title}}</li>
+          <router-link :to="title.path" class="title-li" v-for="title in titles">{{title.name}}</router-link>
         </ul>
       </div>
       <div class="title-right half-title animateClass-child">

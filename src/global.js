@@ -1,7 +1,7 @@
 /**
  * Created by zhuliang on 2017/4/6.
  */
-global.title=['首页','报纸','关于','联系'];
+global.title=[{name:'首页',path:"/"},{name:'报纸',path:"/newspaperPage"},{name:'关于',path:"/"},{name:'联系',path:"/"}];
 global.mainContentTile="打破传统报纸阅读方式";
 global.mainContentFir="各类报纸一站式搜索，新闻热点随时掌握，";
 global.mainContentSec="给你带来全新的阅读体验。";
