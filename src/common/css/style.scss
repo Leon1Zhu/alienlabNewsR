@@ -32,6 +32,15 @@ html,body,#app{
   -o-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
 }
+
+
+.animateClass1{
+  -webkit-transition: all .2s ease-in-out 0s;
+  -moz-transition: all .2s ease-in-out 0s;
+  -ms-transition: all .2s ease-in-out 0s;
+  -o-transition: all .2s ease-in-out 0s;
+  transition: all .2s ease-in-out 0s;
+}
 .font-size-maintitle{
   font-size:30px;
 }
@@ -50,6 +59,17 @@ html,body,#app{
 .font-size-minsup{
   font-size:4px;
 }
+.news-hover-bg{
+  top:-100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height:100%;
+  width:100%;
+  background: rgba(0,0,0,0.7);
+}
+
 
 /*响应式*/
 @media (min-width:720px) {
@@ -75,7 +95,6 @@ html,body,#app{
     padding-left:3px;
     padding-right:3px;
   }
-
 }
 
 @media (min-width:1080px) {

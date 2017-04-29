@@ -6,6 +6,16 @@
   display: flex;
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
   width:100%;
+  .loginBtn {
+    .icon-xiaoren{
+      padding-right:0px!important;
+    }
+    .header-login{
+      color: #ececec;
+      position: relative;
+      top:-5px;
+    }
+  }
   .iconfont{
     cursor: pointer;
   }

@@ -23,6 +23,8 @@
   }
   .news-card{
     margin-left:20px;
+    height: 181px;
+    margin-bottom:9px;
   }
   .news-card:nth-child(3n+1){
     margin-left:0px;
@@ -30,31 +32,36 @@
   /*响应式*/
   @media (min-width: 720px) {
     .news-content .swiper-content .news-card {
-      height: 185px;
+      height: 181px;
+      margin-bottom:9px;
     }
   }
 
   @media (min-width: 1080px) {
     .news-content .swiper-content .news-card {
-      height: 205px;
+      height: 198px;
+      margin-bottom:8px;
     }
   }
 
   @media (min-width: 1366px) {
     .news-content .swiper-content .news-card {
-      height: 260px;
+      height: 248px;
+      margin-bottom:10px;
     }
   }
 
   @media (min-width: 1680px) {
     .news-content .swiper-content .news-card {
-      height: 310px;
+      height: 300px;
+      margin-bottom: 10px;
     }
   }
 
   @media (min-width: 1920px) {
     .news-content .swiper-content .news-card {
-      height: 370px;
+      height: 360px;
+      margin-bottom:15px;
     }
   }
 

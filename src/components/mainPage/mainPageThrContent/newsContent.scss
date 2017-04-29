@@ -1,26 +1,36 @@
 .news-content{
-  width:630px;
+  width:500px;
   margin:0 auto;
   .swiper-pagination-clickable{
     cursor: default;
   }
   .swiper-content{
     .news-card{
+      box-shadow: 2px 0px 2px rgba(0,0,0,0.2);
+      overflow: hidden;
       height:213px;
       width:153px!important;
       cursor: default;
       .news-top-content,.news-below-content{
+        position: relative;
         cursor: pointer;
+        box-shadow: 9px 1px 2px rgba(0,0,0,0.2);
+      }
+      .icon-yanjing1{
+        font-size:600%;
+        color: white;
       }
       .news-below-content{
         padding:10px 0px 10px 5px;
-        margin-top:-2px;
+        margin-top:-5px;
         background: #f9f9f8;
         display: flex;
         .left-content,.right-content{
           width:50%;
         }
         .news-left-content{
+          padding-left:1%;
+          position: relative;
           flex:1 1 60%;
         }
         .news-time{

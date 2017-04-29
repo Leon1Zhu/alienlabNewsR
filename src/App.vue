@@ -10,7 +10,12 @@
       <div class="title-right half-title animateClass-child">
         <i class="iconfont main-icon icon-search font-size-title-icon"></i>
         <i class="iconfont main-icon icon-lingdangline_ font-size-title-icon"></i>
+        <div class="loginBtn">
         <i class="iconfont main-icon icon-xiaoren  font-size-title-icon"></i>
+          <span class="header-login font-size-body">登陆</span>
+          <span class="header-login font-size-body">/</span>
+          <span class="header-login font-size-body">注册</span>
+        </div>
       </div>
     </header>
     <router-view></router-view>
