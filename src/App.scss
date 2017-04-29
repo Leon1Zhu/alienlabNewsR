@@ -1,3 +1,6 @@
+#app.canhidden{
+  overflow: hidden;
+}
 #header{
   z-index:1;
   position: absolute;
@@ -7,6 +10,7 @@
   box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
   width:100%;
   .loginBtn {
+    padding-right:15px;
     .icon-xiaoren{
       padding-right:0px!important;
     }
@@ -15,6 +19,10 @@
       position: relative;
       top:-5px;
     }
+  }
+  .loginBtn:hover{
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
   }
   .iconfont{
     cursor: pointer;
@@ -31,16 +39,11 @@
     display: flex;
     justify-content: center;
   }
-  .font-size-title-icon{
-    font-size: 27px;
-    line-height:70px;
-    color: #f9f9f9;
-    padding: 0px 15px 0 15px;
-  }
+
   .title-icon{
-    background: url("./assets/logo.png") 100% bottom;
+   /* background: url("./assets/logo.png") 100% bottom;
     -webkit-background-size:cover;
-    background-size:cover;
+    background-size:cover;*/
     width:38%;
     margin-top:12px;
     margin-right:2%;
@@ -59,11 +62,6 @@
       background: rgba(255,255,255,0.3);
       cursor: pointer;
     }
-  }
-
-  .main-icon:hover{
-    background: rgba(255,255,255,0.3);
-    cursor: pointer;
   }
 }
 .main-footer{
@@ -124,11 +122,8 @@
     .title-icon {
       width: 183px;
     }
-    .font-size-title-icon {
-      font-size: 23px;
-    }
-    .font-size-title-icon {
-      padding: 0px 20px 0 20px;
+    .loginBtn{
+      padding-right:20px;
     }
   }
   .main-footer{
@@ -136,6 +131,7 @@
       line-height: 15px;
     }
   }
+
 }
 
 @media (min-width:1080px) {
@@ -151,12 +147,8 @@
     .title-icon {
       margin-top: 16px;
     }
-    .font-size-title-icon {
-      font-size: 26px;
-      line-height: 70px;
-    }
-    .font-size-title-icon {
-      padding: 0px 25px 0 25px;
+    .loginBtn{
+      padding-right:25px;
     }
   }
   .main-footer{
@@ -164,6 +156,7 @@
       line-height: 18px;
     }
   }
+
 }
 
 @media (min-width:1366px) {
@@ -179,12 +172,8 @@
     .title-icon {
       margin-top: 21px;
     }
-    .font-size-title-icon {
-      font-size: 27px;
-      line-height: 80px;
-    }
-    .font-size-title-icon {
-      padding: 0px 30px 0 30px;
+    .loginBtn{
+      padding-right:30px;
     }
   }
   .main-footer{
@@ -208,12 +197,8 @@
     .title-icon {
       margin-top: 26px;
     }
-    .font-size-title-icon {
-      font-size: 30px;
-      line-height: 90px;
-    }
-    .font-size-title-icon {
-      padding: 0px 35px 0 35px;
+    .loginBtn{
+      padding-right:35px;
     }
   }
   .main-footer{
@@ -239,13 +224,9 @@
       .title-icon {
         margin-top: 31px;
       }
-      .font-size-title-icon {
-        font-size: 32px;
-        line-height: 100px;
-      }
-      .font-size-title-icon {
-        padding: 0px 40px 0 40px;
-      }
+    .loginBtn{
+      padding-right:40px;
+    }
   }
   .main-footer{
     .alienlab-info,.alienlab-reference{

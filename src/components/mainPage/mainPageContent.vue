@@ -31,7 +31,7 @@
   import secContent from './mainPageSecContent/mainPageSecContent.vue'
   import thrContent from './mainPageThrContent/mainPageThrContent.vue'
   import fouContent from './mainPageFouContent/mainPageFoucontent.vue'
-  import swiper from '../../common/vue/swiperTimer/swiperTimer.vue'
+/*  import swiper from '../../common/vue/swiperTimer/swiperTimer.vue'*/
     export default{
         data(){
             return {
@@ -44,7 +44,7 @@
           "secContent":secContent,
           "thrContent":thrContent,
           "fouContent":fouContent,
-          "swiper":swiper,
+        /*  "swiper":swiper,*/
       },
     }
 </script>

@@ -1,0 +1,149 @@
+#login-content{
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  z-index:2;
+  height:100%;
+  width:100%;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  .icon-guanbi{
+     position: absolute;
+     right:0px;
+     top:0px;
+     padding:0px;
+    margin-top :20px;
+     margin-right:20px;
+    line-height:30px;
+    z-index:2;
+   }
+  .icon-guanbi:hover{
+    transform:rotate(90deg) ;
+    cursor: pointer;
+  }
+  .main-content{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    width:100%;
+    .login-content{
+      display: flex;
+      padding:10px 15px;
+      width:50%;
+      .login-left-content,.login-right-content{
+        padding:20px 30px;
+      }
+      .login-left-content{
+        background: #ffffff;
+        width:75%;
+        .denglu-icon-div{
+          text-align: center;
+          .icon-denglu{
+            color: #d1d8e0;
+            font-size:6rem;
+          }
+        }
+        .logininput{
+          margin-top:6%;
+        }
+        #loginName{
+          margin-top:2%;
+        }
+        .loginButton{
+          background: #3bb8d2;
+          margin-top:3%;
+        }
+        .rememberMe{
+          margin-left:4px;
+          margin-top:3%;
+        }
+      }
+      .login-right-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f9f9f9;
+        width:25%;
+        .signButton{
+          background: #3bb8d2;
+          margin-top:3%;
+        }
+      }
+      .login-left-content.signup{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        background: #f9f9f9;
+        width:25%;
+      }
+      .login-right-content.signup{
+        background: #ffffff;
+        width:75%;
+      }
+    }
+
+    .text-gradient {
+      display: inline-block;
+      color: #dc3721;
+      font-size: 4em;
+      font-family: '微软雅黑';
+    };
+    .logininput input{
+      border-top: 0px;
+      border-left: 0px;
+      border-radius: 0px;
+      border-right: 0px;
+    }
+    .logininput input:focus{
+      box-shadow: 0 0 0 2px white ;
+    }
+    .signupinput{
+      margin-top:2%;
+    }
+  }
+  signupfont{
+    width:270px;
+  }
+  /*响应式*/
+  @media (min-width: 720px) {
+    .signupfont{
+      width:270px;
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .signupfont{
+      width:190px;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    .signupfont{
+      width:170px;
+    }
+  }
+
+  @media (min-width: 1680px) {
+    .signupfont{
+      width:159px;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .signupfont{
+      width:155px;
+    }
+
+  }
+}
+#login-content.show{
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}

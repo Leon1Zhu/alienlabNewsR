@@ -4,17 +4,21 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './common/css/reset.css'
-import './common/css/style.scss'
-import './common/font/iconfont.css'
 import 'iview/dist/styles/iview.css';    // 使用 CSS
+import './common/font/iconfont.css'
+import './common/css/style.scss'
 import './global'
 import store from './store/index'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import $ from 'jquery'
+import Input from 'iview';
+import Button from 'iview';
 import './mainFun'
 //typical import
-import {TweenMax, Power2, TimelineLite,TweenLite} from "gsap";
+import {TweenLite} from "gsap";
 Vue.use(VueAwesomeSwiper)
+Vue.use(Input)
+Vue.use(Button)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({

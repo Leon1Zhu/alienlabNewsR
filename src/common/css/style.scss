@@ -23,6 +23,13 @@ html,body,#app{
   -o-transition: all .3s ease-in-out 0s;
   transition: all .3s ease-in-out 0s;
 }
+.animateClass6{
+  -webkit-transition: all .6s ease-in-out 0s;
+  -moz-transition: all .6s ease-in-out 0s;
+  -ms-transition: all .6s ease-in-out 0s;
+  -o-transition: all .6s ease-in-out 0s;
+  transition: all .6s ease-in-out 0s;
+}
 
 
 .animateClass{
@@ -69,8 +76,17 @@ html,body,#app{
   width:100%;
   background: rgba(0,0,0,0.7);
 }
+.font-size-title-icon{
+  font-size: 27px;
+  line-height:70px;
+  color: #f9f9f9;
+  padding: 0px 15px 0 15px;
+}
 
-
+.main-icon:hover{
+  background: rgba(255,255,255,0.3);
+  cursor: pointer;
+}
 /*响应式*/
 @media (min-width:720px) {
   .font-size-maintitle{
@@ -94,6 +110,10 @@ html,body,#app{
   .title-li{
     padding-left:3px;
     padding-right:3px;
+  }
+  .font-size-title-icon {
+    font-size: 23px;
+    padding: 0px 20px 0 20px;
   }
 }
 
@@ -120,7 +140,11 @@ html,body,#app{
     padding-left:13px;
     padding-right:13px;
   }
-
+  .font-size-title-icon {
+    font-size: 26px;
+    line-height: 70px;
+    padding: 0px 25px 0 25px;
+  }
 }
 
 @media (min-width:1366px) {
@@ -146,6 +170,11 @@ html,body,#app{
     padding-left:12px;
     padding-right:12px;
   }
+  .font-size-title-icon {
+    font-size: 27px;
+    line-height: 80px;
+    padding: 0px 30px 0 30px;
+  }
 }
 
 
@@ -167,6 +196,11 @@ html,body,#app{
   }
   .font-size-minsup{
     font-size:13px;
+  }
+  .font-size-title-icon {
+    font-size: 30px;
+    line-height: 90px;
+    padding: 0px 35px 0 35px;
   }
 }
 
@@ -191,5 +225,10 @@ html,body,#app{
   }
   .font-size-minsup{
     font-size:16px;
+  }
+  .font-size-title-icon {
+    font-size: 32px;
+    line-height: 100px;
+    padding: 0px 40px 0 40px;
   }
 }
