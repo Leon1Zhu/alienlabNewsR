@@ -2,7 +2,7 @@
  * Created by zhuliang on 2017/3/6.
  * 登陆的相关数据的store
  */
-import loginFun from '../../api/index'
+import loginFun from '../../api/newsPaperPages'
 import * as types  from '../mutations-types'
 
 const  state = {

@@ -5,6 +5,32 @@ global.title=[{name:'首页',path:"/"},{name:'报纸',path:"/newspaperPage"},{na
 global.mainContentTile="打破传统报纸阅读方式";
 global.mainContentFir="各类报纸一站式搜索，新闻热点随时掌握，";
 global.mainContentSec="给你带来全新的阅读体验。";
+global.tokenUrl="http://localhost:8011/getToken"
+global.SERVICEURL="http://localhost:8011"
+global.TOKENTIME=new Date();
+global.TOKEN="";
+global.PICURL="http://localhost:8083/static/newsImg/";
+global.NEWSTYPE=[
+  {name:"头条",icon:"icon-redian",type:"top"},
+  {name:"社会",icon:"icon-shehui",type:"shehui"},
+  {name:"国内",icon:"icon-guonei",type:"guonei"},
+  {name:"国际",icon:"icon-guoji",type:"guoji"},
+  {name:"娱乐",icon:"icon-yulebagua",type:"yule"},
+  {name:"体育",icon:"icon-tiyu",type:"tiyu"},
+  {name:"军事",icon:"icon-junshi",type:"junshi"},
+  {name:"科技",icon:"icon-keji",type:"keji"},
+  {name:"财经",icon:"icon-caijing",type:"caijing"},
+  ]
+
+
+
+
+
+
+
+
+
+
 global.historyList=[{"detail":"Swiper中文网上线","date":"2014-11-21"},
   {"detail":"Swiper3.x版本上线","date":"2015-02-01"},
   {"detail":"Swiper交友群开通","date":"2015-02-26"},
@@ -25,3 +51,5 @@ global.historyList=[{"detail":"Swiper中文网上线","date":"2014-11-21"},
   {"detail":"Swiper3.4.0，变焦和历史状态","date":"2024-10-16"},
   {"detail":"Swiper交友群人数达到2000","date":"2025-01-19"},
 ];
+
+

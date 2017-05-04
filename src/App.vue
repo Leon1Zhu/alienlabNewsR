@@ -64,6 +64,7 @@ export default {
  },
   created(){
 
+
   },
   methods:{
       showLogin(){

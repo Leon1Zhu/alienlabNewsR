@@ -5,8 +5,7 @@
       <div class="paper-classify-font font-size-paper animateClass">报纸分类</div>
     </div>
     <div class="paper-nav news-content">
-      <div class="sortBtn font-size-body animateClass"  >全部</div>
-      <div class="sortBtn font-size-body animateClass"  v-for="sortbtn in papersSortBtn" >{{sortbtn}}</div>
+      <div class="sortBtn font-size-body animateClass" :class="{'active': sortbtn.active}"  v-for="(sortbtn,index) in papersSortBtn" @click="bindClick(index)">{{sortbtn.title}}</div>
       <Button class="collect-btn" type="ghost" >收藏</Button>
     </div>
     <newsContentT :newsContent="newsContent"></newsContentT>
@@ -16,23 +15,67 @@
 <script>
   import './newspapgerPage.scss'
   import newsContentT from '../mainPage/mainPageFouContent/newsContentT.vue'
-  import Button from 'iview/src/components/button';
+  import api from '../../api/newsPaperPages.js'
     export default{
         data(){
             return {
-              newsContent:[{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}],
-              papersSortBtn:["机关报","商业报","晚报","周末报","都市报","专业报","产业报","生活报"],
+              newsContentAll:[[]],
+              papersSortBtn:[],
+              newsContent:[],
             }
         },
       components: {
         "newsContentT":newsContentT,
-        Button
+      },
+      computed:{
+
+      },
+      created(){
+        let vm = this;
+        api.getAllInfo().then((response) => {
+           var allBtn = {
+                title:"全部",
+                active:true
+           }
+            this.papersSortBtn.push(allBtn)
+            let allNews=[];
+            let i = 0,len = response.data.length;
+            for(;i<len;i++){
+              allBtn = {
+                title:response.data[i].typeName,
+                active:false
+              }
+              this.papersSortBtn.push(allBtn)
+              this.newsContentAll.push(response.data[i].papers)
+              for(let t=0;t<response.data[i].papers.length;t++){
+                allNews.push(response.data[i].papers[t])
+              }
+            }
+            this.newsContentAll[0] = allNews;
+           this.newsContent=allNews
+           this.$nextTick(function(){
+            this.$cardHover();
+           })
+          console.log(this.newsContentAll[0])
+        }).catch(function(response) {
+          vm.$Notice.error(setNoticConfig(response.data.message,null,null,"error"));
+        })
       },
       mounted(){
-        $(".sortBtn").unbind("click").click(function(){
-            $(".sortBtn").removeClass("active")
-            $(this).addClass("active")
-        })
+      },
+      methods:{
+          bindClick(index){
+              for(let i=0;i<this.papersSortBtn.length;i++){
+                this.papersSortBtn[i].active=false;
+                if(index==i){
+                  this.papersSortBtn[i].active=true;
+                }
+              }
+            this.newsContent=this.newsContentAll[index];
+            this.$nextTick(function(){
+              this.$cardHover();
+            })
+          }
       }
     }
 </script>
