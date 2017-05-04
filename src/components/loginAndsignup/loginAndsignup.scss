@@ -9,6 +9,17 @@
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
+  #wait2 {
+    text-align: left;
+    color: #666;
+    margin: 0;
+  }
+  .hide {
+    display: none;
+  }
+  #notice2 {
+    color: red;
+  }
   .icon-guanbi{
      position: absolute;
      right:0px;
@@ -37,6 +48,9 @@
       .login-left-content,.login-right-content{
         padding:20px 30px;
       }
+      .login-right-content{
+        padding-left:0px;
+      }
       .login-left-content{
         background: #ffffff;
         width:75%;
@@ -55,11 +69,12 @@
         }
         .loginButton{
           background: #3bb8d2;
-          margin-top:3%;
-        }
+          margin-top:1%;
+      }
         .rememberMe{
+          margin-top:1%;
+          margin-bottom:1%;
           margin-left:4px;
-          margin-top:3%;
         }
       }
       .login-right-content{
@@ -106,36 +121,36 @@
     }
   }
   signupfont{
-    width:270px;
+    width:393px;
   }
   /*响应式*/
   @media (min-width: 720px) {
     .signupfont{
-      width:270px;
+      width:393px;
     }
   }
 
   @media (min-width: 1080px) {
     .signupfont{
-      width:190px;
+      width:280px;
     }
   }
 
   @media (min-width: 1366px) {
     .signupfont{
-      width:170px;
+      width:205px;
     }
   }
 
   @media (min-width: 1680px) {
     .signupfont{
-      width:159px;
+      width:200px;
     }
   }
 
   @media (min-width: 1920px) {
     .signupfont{
-      width:155px;
+      width:190px;
     }
 
   }

@@ -24,6 +24,11 @@ global.NEWSTYPE=[
 
 
 
+global.ISLOGIN=false;
+global.USERINFO=[];
+
+
+
 
 
 

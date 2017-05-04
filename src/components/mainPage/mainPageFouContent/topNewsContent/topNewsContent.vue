@@ -67,15 +67,15 @@
           moreInfo(){
             this.moreInfoBtnFlag=false;
               if(this.newCount+3>this.contentsT.length){
-                  for(let i = this.newCount-1;i<this.contentsT.length;i++){
+                    for(let i = this.newCount-1;i<this.contentsT.length;i++){
+                      this.contentsNews.push(this.contentsT[i])
+                    }
+              }else{
+                  for(let i = this.newCount-1;i<this.newCount+2;i++){
                     this.contentsNews.push(this.contentsT[i])
                   }
-              }else{
-                for(let i = this.newCount-1;i<this.newCount+2;i++){
-                  this.contentsNews.push(this.contentsT[i])
-                }
-                this.newCount+=3;
-                this.moreInfoBtnFlag=true;
+                  this.newCount+=3;
+                  this.moreInfoBtnFlag=true;
               }
           }
         }

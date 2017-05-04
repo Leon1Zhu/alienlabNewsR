@@ -8,10 +8,17 @@
               <div class="denglu-icon-div">
                 <i class="iconfont icon-denglu" style="height: 20%;width: 20%;"></i>
               </div>
-              <Input id="loginName" class="logininput"  placeholder="用 户 名"></Input>
-              <Input id="loginPassword" class="logininput"  placeholder="密 码"></Input>
+              <Input id="loginName" class="logininput"  placeholder="用 户 名:"></Input>
+              <Input id="loginPassword" class="logininput"  placeholder="密 码:"></Input>
+              <div style="margin-top: 1%;">
+                <label>完成验证：</label>
+                <div id="captcha2">
+                  <p id="wait2" class="show">正在加载验证码......</p>
+                </div>
+              </div>
+              <p id="notice2" class="hide">请先完成验证</p>
               <Checkbox class="rememberMe" >记 住 我</Checkbox>
-              <Button class="loginButton" shape="circle" type="info" long>登&nbsp;&nbsp;陆</Button>
+              <Button class="loginButton" shape="circle" type="info" long @click="Login">登&nbsp;&nbsp;陆</Button>
             </div>
             <div v-if="loginstatus=='signup'">
               <div class="font-size-title" >已有账号？</div>
@@ -26,11 +33,12 @@
               <div class="sign-up" v-if="loginstatus=='signup'" style="display: flex;width: 100%;">
                 <div class="signupfont font-size-title" style="color: #5b5b5b;text-align: right;margin-right: 10px;">用户注册:</div>
                 <div style="width: auto;">
-                  <Input  class="logininput signupinput"  placeholder="用 户 名"></Input>
-                  <Input  class="logininput signupinput"  placeholder="密 码"></Input>
-                  <Input  class="logininput signupinput"  placeholder="电子邮箱"></Input>
-                  <Input  class="logininput signupinput"  placeholder="手机号码"></Input>
-                  <Button class="signButton" shape="circle" type="info" long>注&nbsp;&nbsp;册</Button>
+                  <Input  class="logininput signupinput" v-model="regist.username"  placeholder="用 户 名："></Input>
+                  <Input  class="logininput signupinput" v-model="regist.pwd"  placeholder="密 码:"></Input>
+                  <Input  class="logininput signupinput" v-model="regist.pwdSec"  placeholder="重复密码:"></Input>
+                  <Input  class="logininput signupinput" v-model="regist.tel"  placeholder="手机号码:"></Input>
+                  <Input  class="logininput signupinput" v-model="regist.email"  placeholder="电子邮箱:"></Input>
+                  <Button class="signButton" shape="circle" type="info" long @click="registFun">注&nbsp;&nbsp;册</Button>
                 </div>
               </div>
           </div>
@@ -43,23 +51,77 @@
 <script>
   import './loginAndsignup.scss'
   import Checkbox from 'iview/src/components/checkbox';
+  import loginapi from '../../api/login'
     export default{
       props: ['showLoginFlag'],
       data(){
             return {
-              loginstatus:'login'
+              loginstatus:'login',
+              captchaObj:null,
+              regist:{
+                  username:null,
+                  pwd:null,
+                  pwdSec:null,
+                  tel:null,
+                  email:null,
+              }
             }
       },
-      methods:{
-        closeContent(){
-          this.$emit('closeContent')
-        }
+      created(){
+          var vm = this;
+        loginapi.getGeetest().then((response) =>{
+          initGeetest({
+            // 以下配置参数来自服务端 SDK
+            gt: response.data.gt,
+            challenge: response.data.challenge,
+            offline: !response.data.success,
+            new_captcha: response.data.new_captcha,
+            product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+            width: '100%'
+          }, function (captchaObj) {
+            vm.captchaObj = captchaObj
+            // 将验证码加到id为captcha的元素里，同时会有三个input的值用于表单提交
+            captchaObj.appendTo("#captcha2");
+            captchaObj.onReady(function () {
+              this.captchaObj = captchaObj;
+              $("#wait2").hide();
+            });
+          })
+
+        })
       },
       components:{
         Checkbox
       },
       mounted(){
-      }
+      },
+      methods:{
+        closeContent(){
+          this.$emit('closeContent')
+        },
+        Login(){
+          var result = this.captchaObj.getValidate();
+          if(result==null){
+            this.$Notice.error(setNoticConfig("请先通过验证！",null,null,""));
+          }
+        },
+        registFun(){
+            if(this.regist.username==null || this.regist.pwd==null ||this.regist.tel==null){
+               this.$Notice.error(setNoticConfig("一下字段不能为空[用户名，密码，手机号码]！",null,null,""));
+               return;
+            }
+            if(this.regist.pwd!=this.regist.pwdSec){
+              this.$Notice.error(setNoticConfig("用户名不能为空！",null,null,""));
+              return;
+            }
+            loginapi.regist(this.regist.username,this.regist.pwd,this.regist.tel,this.regist.email,"","0").then((response)=>{
+                console.log(response)
+            }).catch((response)=>{
+              console.log(response)
+            })
+
+        }
+      },
     }
 </script>
 

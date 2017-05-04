@@ -19,7 +19,8 @@ axios.interceptors.request.use(
       if (TOKEN) {  // 判断是否存在token，如果存在的话，则每个http header都加上token
         config.url = SERVICEURL+config.url;
         config.headers.Authorization = TOKEN;
-       /* console.log(config)*/
+        console.log("发送请求!")
+        console.log(config)
       }
     }
     return config;
@@ -31,6 +32,7 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
   response => {
+    console.log("收到请求")
     console.log(JSON.parse(JSON.stringify(response)))
     return response;
   },
@@ -57,3 +59,7 @@ global.refushToken=function(){
       console.log("尚未过时，尚能使用")
     }
 }
+global.setLoginInfo=function(logininfo,rememberMe){
+    USERINFO = logininfo
+}
+
