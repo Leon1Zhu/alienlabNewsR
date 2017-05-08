@@ -31,7 +31,7 @@
             return {
                 contentsT:null,
                 contentsNews:[],
-                moreInfoBtnFlag:true,
+                moreInfoBtnFlag:false,
                 newCount:0,
             }
         },
@@ -66,12 +66,12 @@
           },
           moreInfo(){
             this.moreInfoBtnFlag=false;
-              if(this.newCount+3>this.contentsT.length){
-                    for(let i = this.newCount-1;i<this.contentsT.length;i++){
+              if(this.newCount+3>=this.contentsT.length){
+                    for(let i = this.newCount;i<this.contentsT.length;i++){
                       this.contentsNews.push(this.contentsT[i])
                     }
               }else{
-                  for(let i = this.newCount-1;i<this.newCount+2;i++){
+                  for(let i = this.newCount;i<this.newCount+3;i++){
                     this.contentsNews.push(this.contentsT[i])
                   }
                   this.newCount+=3;

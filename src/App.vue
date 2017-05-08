@@ -5,19 +5,37 @@
       <div class="title-left half-title animateClass-child">
         <img class="title-icon " src="./assets/logo.png">
         <ul class="title-ul font-size-body animateClass-child">
-          <router-link :to="title.path" class="title-li" v-for="title in titles">{{title.name}}</router-link>
+          <router-link :key="index"  class="title-li" v-for="(title,index) in titles" :to="title.path">{{title.name}}</router-link>
         </ul>
       </div>
       <div class="title-right half-title animateClass-child">
         <i class="iconfont main-icon icon-search font-size-title-icon"></i>
         <i class="iconfont main-icon icon-lingdangline_ font-size-title-icon"></i>
-        <div class="loginBtn" @click="showLogin">
-        <i class="iconfont  icon-xiaoren  font-size-title-icon"></i>
+        <div class="loginBtn" @click="showLogin" v-if="!loginflag">
+        <i class="iconfont  icon-xiaoren  font-size-title-icon" ></i>
             <span class="header-login font-size-body">登陆</span>
             <span class="header-login font-size-body">/</span>
             <span class="header-login font-size-body">注册</span>
         </div>
+        <div class="userInfo loginBtn"  v-if="loginflag">
+          <i class="iconfont  icon-xiaoren  font-size-title-icon" ></i>
+          <Poptip trigger="hover" title="提示标题"  placement="bottom">
+            <span class="header-login font-size-body">{{userInfo.nickName}}</span>
+            <div  slot="content" >
+              <table>
+                <tbody>
+                <tr >
+                  <td  class="loginOut" @click="LoginOut">退出登陆</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </Poptip>
+
+        </div>
       </div>
+
+
     </header>
     <router-view></router-view>
     <footer class="main-footer">
@@ -62,7 +80,18 @@ export default {
          showLoginflag:false,
      }
  },
+  computed:{
+    loginflag(){
+        console.log(ISLOGIN)
+        return ISLOGIN;
+    },
+    userInfo(){
+        console.log(USERINFO)
+        return USERINFO;
+    }
+  },
   created(){
+    checkLoginInfo();
   },
   methods:{
       showLogin(){
@@ -70,7 +99,11 @@ export default {
       },
        closeContentCB(){
            this.showLoginflag=false;
-       }
+       },
+    LoginOut(){
+           loginOut();
+           this.$router.go(0)
+    }
   },
   components: {
     "loginContent":loginContent,

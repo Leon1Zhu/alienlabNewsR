@@ -10,7 +10,8 @@ const mainPage = resolve => require(['@/components/mainPage/mainPageContent'], r
 const newspaperPage = resolve => require(['@/components/newspaperPages/newspaperPage'], resolve);
 
 export default new Router({
-  mode: 'history',
+  /*mode: 'history',*/
+  base: __dirname,
   routes: [
     {path: '/', component: mainPage},
     {path: '/newspaperPage', component: newspaperPage},

@@ -2,22 +2,34 @@
   <div class="news-content">
     <swiper class="swiper-content animateClass"  :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide class="news-card" v-for=" news in newsContent">
+      <swiper-slide class="news-card" v-for=" news in newsContent" :key="news.id">
         <div class="news-top-content ">
           <div class="news-hover-bg">
             <i class="iconfont  icon-yanjing1 font-size-title-icon"></i>
           </div>
-          <img class="news-top-img" src="../../../assets/sltp.jpg" />
+          <img class="news-top-img" :src="picurl+news.picUrl" />
         </div>
         <div class="news-below-content animateClass1">
           <div class="news-left-content ">
-            <div class="news-name font-size-sup animateClass1">人民日报</div>
-            <div class="news-time font-size-minsup animateClass1" >2017/01/07期</div>
+            <div class="news-name font-size-sup animateClass1">{{news.paperName}}</div>
+            <Poptip  style="line-height: 1.2;"  trigger="hover" placement="top-start" title="提示标题"  v-if="news.paperinfolist!='' && news.paperinfolist !=null">
+              <i class="iconfont main-icon icon-navqikanpindao font-size-top"></i>
+              <div  slot="content" >
+                <table>
+                  <tbody>
+                  <tr v-for="item in news.paperinfolist">
+                    <td @click="watch(news,item.updateTime)" class="font-size-body">{{item.updateTime}}期</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Poptip>
+            <div class="news-time font-size-minsup animateClass1" v-if="news.paperinfolist=='' || news.paperinfolist ==null">暂无期刊</div>
           </div>
           <div class="news-right-content ">
             <div class="right-collect-content ">
-              <i class="iconfont icon-xingxing01 "></i>
-              <div class="news-collect-count font-size-minsup">20</div>
+              <i class="iconfont icon-xingxing01 collect" @click="delready(news)"></i>
+              <div class="news-collect-count font-size-minsup">{{news.collectCount}}</div>
             </div>
           </div>
         </div>
@@ -25,7 +37,18 @@
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
-
+    <Modal v-model="modal2" width="360">
+      <p slot="header" style="color:#f60;text-align:center">
+        <Icon type="information-circled"></Icon>
+        <span>操作确认</span>
+      </p>
+      <div style="text-align:center">
+        <p>确认取消对该报刊的收藏么？</p>
+      </div>
+      <div slot="footer">
+        <Button type="error" size="large" long :loading="modal_loading" @click="del">取消收藏</Button>
+      </div>
+    </Modal>
   </div>
 </template>
 
@@ -64,7 +87,10 @@
                 onTransitionStart(swiper){
                   console.log(swiper)
                 }
-              }
+              },
+              picurl:PICURL,
+              modal2:false,
+              news:null,
             }
         },
       computed: {
@@ -73,12 +99,20 @@
         }
       },
       methods:{
-            prevSwiper(){
-              this.swiper.slidePrev();
-            },
-            silderNext(){
-              this.swiper.slideNext()
-            }
+        prevSwiper(){
+            this.swiper.slidePrev();
+        },
+        silderNext(){
+           this.swiper.slideNext()
+        },
+        delready(news){
+            this.news = news;
+            this.modal2 = true;
+        },
+        del(){
+          this.$emit('UncollectPaper',this.news)
+          this.modal2=false;
+        }
       },
       mounted(){
         this.$cardHover();

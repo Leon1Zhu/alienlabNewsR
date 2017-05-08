@@ -27,28 +27,47 @@
               <div class="news-time font-size-minsup animateClass1" v-if="news.paperinfolist=='' || news.paperinfolist ==null">暂无期刊</div>
             </div>
             <div class="news-right-content">
-              <div class="right-collect-content">
-                <i class="iconfont icon-xingxing01"></i>
+              <div class="right-collect-content" >
+                <i class="iconfont icon-xingxing01 nocollect" :class="{'collect' : news.isCollect}" @click="collectFun(news)"></i>
                 <div class="news-collect-count font-size-minsup">{{news.collectCount}}</div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
+    <Modal v-model="modal2" width="360">
+      <p slot="header" style="color:#f60;text-align:center">
+        <Icon type="information-circled"></Icon>
+        <span>操作确认</span>
+      </p>
+      <div style="text-align:center">
+        <p>确认取消对该报刊的收藏么？</p>
+      </div>
+      <div slot="footer">
+        <Button type="error" size="large" long :loading="modal_loading" @click="del">取消收藏</Button>
+      </div>
+    </Modal>
   </div>
 </template>
 
 <script>
   import './mainPageFouContent.scss'
   import '../mainPageThrContent/newsContent.scss'
+  import collectapi from '../../../api/collect'
   export default{
     props:['newsContent'],
     data(){
       return {
         picurl:PICURL,
+        modal2:false,
+        new:null,
       }
+    },
+    computed:{
+      islogin(){
+        return ISLOGIN;
+      },
     },
     mounted(){
       this.$cardHover();
@@ -58,6 +77,20 @@
          if(v.paperinfolist=="" || v.paperinfolist==null){
            this.$Notice.warning(setNoticConfig("该报纸暂无期刊!",null,null,"info"));
          }
+      },
+      del(){
+        this.$emit('UncollectPaper',this.new)
+        this.modal2=false;
+      },
+      collectFun(news){
+          this.new = news;
+          if(!this.islogin){
+            this.$Notice.warning(setNoticConfig("您还没有登陆，暂无该权限!",null,null,"info"));
+          }else if(this.new.isCollect==true){
+              this.modal2=true;
+          }else  if(this.new.isCollect==false){
+            this.$emit('collectPaper',news)
+          }
       }
     }
 

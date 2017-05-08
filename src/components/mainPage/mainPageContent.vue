@@ -10,14 +10,14 @@
         </div>
       </div>
       <div class="right-content"></div>
-      <div class="main-about">
+     <!-- <div class="main-about">
         <div class="about-title">
           <span class="straight main-left-straight">━━━━</span>
           <span class="my-collect font-size-title">关于我们</span>
           <span class="straight main-right-straight">━━━━</span>
         </div>
         <swiper></swiper>
-      </div>
+      </div>-->
     </div>
     <secContent></secContent>
     <thrContent></thrContent>

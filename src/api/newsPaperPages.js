@@ -3,19 +3,17 @@
  * axios基础配置
  */
 import Vue from 'vue'
+import api  from './index'
 
 var getAllPaper = "/api/alinews-paper";
 
 export default {
-    getAllInfo : function(){
-      var p = new Promise(function(resolve, reject){
-        Vue.axios.get(getAllPaper).then((response) => {
-          resolve(response)
-        }).catch(function(response) {
-          reject(response)
-        })
-      });
-      return p;
+    getAllInfo : function(loginflag,userid){
+      var params = {
+        loginflag:loginflag,
+        userid:userid
+      }
+      return api.get(getAllPaper,params)
     }
 }
 

@@ -25,7 +25,6 @@ Vue.use(iView)
 
 Vue.config.productionTip = false
 /* eslint-disable no-new */
-
 // Alter defaults after instance has been created
 Vue.axios.post(tokenUrl,{}).then(function(response){
   TOKEN = response.data.token;
@@ -39,6 +38,9 @@ function buildApp(){
   new Vue({
     router,
     store,
+    created(){
+
+    },
     render: h => h(App),
   }).$mount('#app')
 }

@@ -87,6 +87,9 @@ html,body,#app{
   background: rgba(255,255,255,0.3);
   cursor: pointer;
 }
+.ivu-modal-footer,.ivu-modal-header{
+  border:0px;
+}
 /*响应式*/
 @media (min-width:720px) {
   .font-size-maintitle{

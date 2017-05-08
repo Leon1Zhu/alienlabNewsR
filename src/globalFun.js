@@ -61,5 +61,30 @@ global.refushToken=function(){
 }
 global.setLoginInfo=function(logininfo,rememberMe){
     USERINFO = logininfo
+    ISLOGIN=true;
+    if(rememberMe){
+      localStorage.setItem("AlienlabnewsUserInfo",JSON.stringify(USERINFO));
+    }else{
+      localStorage.setItem("AlienlabnewsUserInfo",null);
+      sessionStorage.setItem("AlienlabnewsUserInfo",JSON.stringify(USERINFO));
+    }
+}
+global.checkLoginInfo=function(){
+    if(JSON.parse(localStorage.getItem("AlienlabnewsUserInfo")) ||  JSON.parse(sessionStorage.getItem("AlienlabnewsUserInfo"))){
+      ISLOGIN=true;
+      console.log(JSON.parse(sessionStorage.getItem("AlienlabnewsUserInfo")))
+      USERINFO = JSON.parse(localStorage.getItem("AlienlabnewsUserInfo"))
+      if(USERINFO==null || USERINFO == ""){
+        USERINFO = JSON.parse(sessionStorage.getItem("AlienlabnewsUserInfo"))
+      }
+      console.log(USERINFO)
+    }else{
+      ISLOGIN=false;
+    }
+}
+global.loginOut=function(){
+  ISLOGIN=false;
+  localStorage.setItem("AlienlabnewsUserInfo",null);
+  sessionStorage.setItem("AlienlabnewsUserInfo",null);
 }
 
