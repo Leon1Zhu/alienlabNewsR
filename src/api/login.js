@@ -27,7 +27,7 @@ export default {
       nickname:nickname,
       resource:resource
     }
-    return api.post(login,{},params)
+    return api.post(regist,{},params)
   },
   getGeetest: function(){
     return api.get(geetest+"?t="+new Date().getTime()+"",{})

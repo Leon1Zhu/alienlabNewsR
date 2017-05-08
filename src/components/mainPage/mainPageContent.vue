@@ -20,7 +20,7 @@
       </div>-->
     </div>
     <secContent></secContent>
-    <thrContent></thrContent>
+    <thrContent ></thrContent>
     <fouContent></fouContent>
 
   </div>
@@ -40,6 +40,14 @@
               mainContentSec :mainContentSec
             }
         },
+      computed:{
+        islogin(){
+          return ISLOGIN;
+        },
+        userinfo(){
+          return USERINFO;
+        }
+      },
       components: {
           "secContent":secContent,
           "thrContent":thrContent,

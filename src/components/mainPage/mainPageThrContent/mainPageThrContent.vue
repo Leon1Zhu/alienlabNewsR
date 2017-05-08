@@ -13,7 +13,7 @@
       <a href="javascript:void(0);" mon="c=top&amp;a=52&amp;col=4&amp;ct=1&amp;pn=0" id="imgplayer-next" class="carousel-btn-next arrow ">
         <span class="icon-wrap arrow-right" @click="prevSwiper"></span>
       </a>
-      <newsContent :newsContent="newsContent"  ref="newsContent" v-on:UncollectPaper="UncollectPaperCB"></newsContent>
+      <newsContent v-if="islogin" :newsContent="newsContent"  ref="newsContent" v-on:UncollectPaper="UncollectPaperCB"></newsContent>
     </div>
   </div>
 </template>
