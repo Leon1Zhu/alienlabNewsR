@@ -9,6 +9,7 @@ const screenShot = resolve => require(['@/common/vue/screenShot/screenShot.vue']
 const mainPage = resolve => require(['@/components/mainPage/mainPageContent'], resolve);
 const newspaperPage = resolve => require(['@/components/newspaperPages/newspaperPage'], resolve);
 const aboutPage = resolve => require(['@/components/aboutPaper/mainPage'], resolve);
+const relation = resolve => require(['@/components/contact/mainPage'], resolve);
 
 export default new Router({
   /*mode: 'history',*/
@@ -19,6 +20,7 @@ export default new Router({
     {path: '/screenShot', component: screenShot},
     {path: '/swiperTimer', component: swiperTimer},
     {path: '/about', component: aboutPage},
+    {path: '/relation', component: relation},
     {path: '*', name: '404', component: notFound}
   ]
 })

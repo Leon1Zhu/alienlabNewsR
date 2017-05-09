@@ -5,7 +5,7 @@
       <div class="title-left half-title animateClass-child">
         <img class="title-icon " src="./assets/logo.png">
         <ul class="title-ul font-size-body animateClass-child">
-          <router-link :key="index"  class="title-li" v-for="(title,index) in titles" :to="title.path">{{title.name}}</router-link>
+          <router-link :key="index"  class="title-li"  v-for="(title,index) in titles" :class="{'clickClass':title.isClick}" :to="title.path" @click.native="changePage(index)">{{title.name}}</router-link>
         </ul>
       </div>
       <div class="title-right half-title animateClass-child">
@@ -101,6 +101,13 @@ export default {
     LoginOut(){
            loginOut();
            this.$router.go(0)
+    },
+    changePage(index){
+        for(var i =0;i<this.titles.length;i++){
+          this.titles[i].isClick=false;
+        }
+      this.titles[index].isClick=true;
+      console.log( this.titles)
     }
   },
   components: {

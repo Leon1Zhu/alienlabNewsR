@@ -1,123 +1,129 @@
-#app.canhidden{
+#app.canhidden {
   overflow: hidden;
 }
-#header{
-  z-index:1;
+
+#header {
+  z-index: 1;
   position: absolute;
-  top:0px;
-  height:70px;
+  top: 0px;
+  height: 70px;
   display: flex;
-  box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-  width:100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
   .loginBtn {
-    padding-right:15px;
-    .icon-xiaoren{
-      padding-right:0px!important;
+    padding-right: 15px;
+    .icon-xiaoren {
+      padding-right: 0px !important;
     }
-    .header-login{
+    .header-login {
       color: #ececec;
       position: relative;
-      top:-5px;
+      top: -5px;
     }
   }
-  .loginBtn:hover{
-    background: rgba(255,255,255,0.3);
+  .loginBtn:hover {
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
   }
-  .loginOut{
+  .clickClass{
+    background: rgba(255, 255, 255, 0.3);
+  }
+  .loginOut {
     cursor: pointer;
   }
-  .userInfo:hover{
-    background: rgba(255,255,255,0);
+  .userInfo:hover {
+    background: rgba(255, 255, 255, 0);
   }
-  .iconfont{
+  .iconfont {
     cursor: pointer;
   }
-  .half-title{
-    width:50%;
+  .half-title {
+    width: 50%;
   }
-  .title-left{
+  .title-left {
     display: flex;
     justify-content: flex-end;
   }
-  .title-right{
+  .title-right {
     position: relative;
     display: flex;
     justify-content: center;
   }
 
-  .title-icon{
-   /* background: url("./assets/logo.png") 100% bottom;
-    -webkit-background-size:cover;
-    background-size:cover;*/
-    width:38%;
-    margin-top:12px;
-    margin-right:2%;
-    height:39px;
+  .title-icon {
+    /* background: url("./assets/logo.png") 100% bottom;
+     -webkit-background-size:cover;
+     background-size:cover;*/
+    width: 38%;
+    margin-top: 12px;
+    margin-right: 2%;
+    height: 39px;
   }
-  .title-ul{
+  .title-ul {
     display: flex;
-    .title-li{
+    .title-li {
       line-height: 70px;
       /*font-family: "微软雅黑";*/
-      padding-left:15px;
-      padding-right:15px;
+      padding-left: 15px;
+      padding-right: 15px;
       color: #f9f9f9;
     }
-    .title-li:hover{
-      background: rgba(255,255,255,0.3);
+    .title-li:hover {
+      background: rgba(255, 255, 255, 0.3);
       cursor: pointer;
     }
   }
 }
-.main-footer{
-  z-index:1;
+
+.main-footer {
+  z-index: 1;
   position: relative;
-/*  width:100%;*/
+  /*  width:100%;*/
   background: #212223;
-  padding:10px 15px;
+  padding: 10px 15px;
   display: flex;
-  .footer-left-content{
-    flex:1 1 70%;
+  .footer-left-content {
+    flex: 1 1 70%;
   }
-  .footer-right-content{
-    flex:1 1 30%;
+  .footer-right-content {
+    flex: 1 1 30%;
   }
-  .chi-left-content{
-    margin:0 auto;
-    width:60%;
+  .chi-left-content {
+    margin: 0 auto;
+    width: 60%;
   }
-  .main-footer-logo{
-    padding:5% 0px;
+  .main-footer-logo {
+    padding: 5% 0px;
   }
-  .alienlab-info,.alienlab-reference{
-    color: rgba(255,255,255,0.4);
+  .alienlab-info, .alienlab-reference {
+    color: rgba(255, 255, 255, 0.4);
     line-height: 27px;
   }
-  .alienlab-reference{
-    padding-top:7%;
-    .alienlab-reference-sec{
-      margin-top:1%;
+  .alienlab-reference {
+    padding-top: 7%;
+    .alienlab-reference-sec {
+      margin-top: 1%;
     }
   }
-  .footer-right-content{
+  .footer-right-content {
     display: flex;
-    .about-right{
-      margin-left:10%;
-     /* width:30%;*/
+    .about-right {
+      margin-left: 10%;
+      /* width:30%;*/
     }
-    .about-title{
+    .about-title {
       color: #ececec;
-      margin-top:50%;
+      margin-top: 50%;
     }
-    .about-body{
-      margin-top:40%;
-      color: rgba(255,255,255,0.4);
+    .about-body {
+      margin-top: 40%;
+      color: rgba(255, 255, 255, 0.4);
     }
   }
 }
+
 /*响应式*/
-@media (min-width:720px) {
+@media (min-width: 720px) {
   #header {
     .title-ul {
       .title-li {
@@ -128,19 +134,19 @@
     .title-icon {
       width: 183px;
     }
-    .loginBtn{
-      padding-right:20px;
+    .loginBtn {
+      padding-right: 20px;
     }
   }
-  .main-footer{
-    .alienlab-info,.alienlab-reference{
+  .main-footer {
+    .alienlab-info, .alienlab-reference {
       line-height: 15px;
     }
   }
 
 }
 
-@media (min-width:1080px) {
+@media (min-width: 1080px) {
   #header {
     height: 70px;
     .title-ul {
@@ -153,19 +159,19 @@
     .title-icon {
       margin-top: 16px;
     }
-    .loginBtn{
-      padding-right:25px;
+    .loginBtn {
+      padding-right: 25px;
     }
   }
-  .main-footer{
-    .alienlab-info,.alienlab-reference{
+  .main-footer {
+    .alienlab-info, .alienlab-reference {
       line-height: 18px;
     }
   }
 
 }
 
-@media (min-width:1366px) {
+@media (min-width: 1366px) {
   #header {
     height: 80px;
     .title-ul {
@@ -178,19 +184,18 @@
     .title-icon {
       margin-top: 21px;
     }
-    .loginBtn{
-      padding-right:30px;
+    .loginBtn {
+      padding-right: 30px;
     }
   }
-  .main-footer{
-    .alienlab-info,.alienlab-reference{
+  .main-footer {
+    .alienlab-info, .alienlab-reference {
       line-height: 21px;
     }
   }
 }
 
-
-@media (min-width:1680px) {
+@media (min-width: 1680px) {
   #header {
     height: 90px;
     .title-ul {
@@ -203,39 +208,36 @@
     .title-icon {
       margin-top: 26px;
     }
-    .loginBtn{
-      padding-right:35px;
+    .loginBtn {
+      padding-right: 35px;
     }
   }
-  .main-footer{
-    .alienlab-info,.alienlab-reference{
+  .main-footer {
+    .alienlab-info, .alienlab-reference {
       line-height: 24px;
     }
   }
 }
 
-
-
-
-@media (min-width:1920px) {
+@media (min-width: 1920px) {
   #header {
-      height: 100px;
-      .title-ul {
-        .title-li {
-          padding-left: 15px;
-          padding-right: 15px;
-          line-height: 100px;
-        }
+    height: 100px;
+    .title-ul {
+      .title-li {
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 100px;
       }
-      .title-icon {
-        margin-top: 31px;
-      }
-    .loginBtn{
-      padding-right:40px;
+    }
+    .title-icon {
+      margin-top: 31px;
+    }
+    .loginBtn {
+      padding-right: 40px;
     }
   }
-  .main-footer{
-    .alienlab-info,.alienlab-reference{
+  .main-footer {
+    .alienlab-info, .alienlab-reference {
       line-height: 27px;
     }
   }
