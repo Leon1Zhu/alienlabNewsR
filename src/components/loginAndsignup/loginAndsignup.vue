@@ -120,10 +120,10 @@
             this.$Notice.error(setNoticConfig("账号或密码不能为空！",null,null,""));
             return;
           }
-         /* if(result==null){
+          if(result==null){
             this.$Notice.error(setNoticConfig("请先通过验证！",null,null,""));
             return;
-          }*/
+          }
           loginapi.Login(this.loginName,this.loginPassword).then((response)=>{
             setLoginInfo(response.data,vm.rememberMe)
             this.$router.go(0)
@@ -143,7 +143,7 @@
               return;
             }
             loginapi.regist(this.regist.username,this.regist.pwd,this.regist.tel,this.regist.email,"","0",this.regist.nickname).then((response)=>{
-              /*vm.closeContent();*/
+              vm.closeContent();
             }).catch((response)=>{
               this.$Notice.warning(setNoticConfig(response.message,null,null,""));
             })

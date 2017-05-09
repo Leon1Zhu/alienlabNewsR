@@ -7,13 +7,19 @@
            <span class="straight thr-right-straight">━━━━</span>
        </div>
     <div class="news-content-div">
+      <div class="noCollect" v-if="newsContent.length==0" style="text-align: center;">
+        <i class="iconfont  icon-kulian  " style="font-size: 1000%;color: #ececec"></i>
+        <div class="font-size-maintitle" style="color: #ececec;">暂无收藏记录哟</div>
+      </div>
+      <div class="iscollect" v-if="islogin && newsContent.length>0">
       <a href="javascript:void(0);" mon="c=top&amp;a=50&amp;col=4&amp;ct=1&amp;pn=0" id="imgplayer-prev" class="carousel-btn-prev arrow ">
         <span class="icon-wrap arrow-left" @click="NextSwiper"></span>
       </a>
       <a href="javascript:void(0);" mon="c=top&amp;a=52&amp;col=4&amp;ct=1&amp;pn=0" id="imgplayer-next" class="carousel-btn-next arrow ">
         <span class="icon-wrap arrow-right" @click="prevSwiper"></span>
       </a>
-      <newsContent v-if="islogin" :newsContent="newsContent"  ref="newsContent" v-on:UncollectPaper="UncollectPaperCB"></newsContent>
+      <newsContent  :newsContent="newsContent"  ref="newsContent" v-on:UncollectPaper="UncollectPaperCB"></newsContent>
+      </div>
     </div>
   </div>
 </template>

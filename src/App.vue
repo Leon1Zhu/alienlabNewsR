@@ -31,11 +31,8 @@
               </table>
             </div>
           </Poptip>
-
         </div>
       </div>
-
-
     </header>
     <router-view></router-view>
     <footer class="main-footer">
@@ -66,6 +63,7 @@
             </div>
         </footer>
     </footer>
+
   </div>
 </template>
 

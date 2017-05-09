@@ -1,0 +1,320 @@
+.aboutPage{
+  position: relative;
+  width:100%;
+  .icons-explain{
+    text-align: center;
+    font-family:微软雅黑;
+  }
+  .paper-top{
+    position: relative;
+    width:100%;
+    height:400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .paper-classify-font{
+      color: white;
+    }
+    .font-size-paper{
+      font-size: 35px;
+    }
+  }
+  .sec-content{
+    .icons-explain{
+      margin: 3% 0;
+      text-align: center;
+      font-family:微软雅黑;
+    }
+    .icons-content{
+      display: flex;
+      position: relative;
+      margin-bottom:3%;
+      .icon-content{
+        text-align: center;
+        flex:1 1 33%;
+        .icon-content-item{
+          -webkit-border-radius:100%;
+          -moz-border-radius:100%;
+          border-radius:100%;
+          background: #c6b299;
+          height: 70px;
+          width:70px;
+          margin:0 auto;
+          .iconfont{
+            color: white;
+            font-size:30px;
+            line-height: 70px;
+          }
+        }
+        .icon-content-name{
+          margin:3% 0;
+        }
+        .icon-content-explain{
+          line-height:180%;
+          margin:0 auto;
+          width:50%;
+          color: #bdbdbd;
+        }
+      }
+    }
+  }
+  .main-about{
+    width:100%;
+    position: relative;
+    padding-bottom:3%;
+    .growth-process{
+      padding-top: 3%;
+      text-align: center;
+      font-family:微软雅黑;
+      color: #ececec;
+    }
+  }
+  .about-team{
+    position: relative;
+    .team-title{
+      padding-top:3%;
+      padding-bottom:10px;
+    }
+    .team-abstract{
+      line-height:180%;
+      margin:0 auto;
+      width:40%;
+      color: #bdbdbd;
+    }
+    .about-content{
+      display: flex;
+      width:80%;
+      padding-top:2%;
+      margin:0 auto;
+      .about-item{
+        flex:1 1 33%;
+        padding-bottom: 3%;
+
+        .item-width{
+          padding-bottom: 3%;
+          width:90%;
+          margin:0 auto;
+          text-align: center;
+          .about-item-img{
+            padding:3% 0;
+            .about-img{
+              border: 3px solid #bdbdbd;
+              border-radius: 100%;
+              height: 140px;
+              width: 140px;
+            }
+          }
+          .about-item-cast{
+            .about-item-abstruct{
+              margin-top:0%;
+              color: #bdbdbd;
+            }
+          }
+          .about-item-person-abstruct{
+            padding-top:2%;
+            width:60%;
+            margin:0 auto;
+            color: #bdbdbd;
+          }
+        }
+        .item-width:hover{
+          box-shadow:2px 0 2px rgba(0,0,0,0.1), /*左边阴影*/
+          0 2px 2px rgba(0,0,0,0.1); /*顶部阴影*/
+        }
+      }
+    }
+  }
+
+  .about-ability{
+    background: #fbfaf8;
+    width:100%;
+    position: relative;
+    padding-bottom:3%;
+    .main-content{
+      display: flex;
+      width:70%;
+      position: relative;
+      margin:0 auto;
+      .left-content,.right-content{
+        flex:1 1 50%;
+      }
+      .left-content{
+        justify-content: right;
+        .ivu-progress-bg{
+          background: #cab296;
+        }
+        .ability-font{
+          color: #bdbdbd;
+        }
+      }
+      .right-content{
+          .right-img{
+            margin-top:5%;
+            width:80%;
+            height:80%;
+          }
+      }
+    }
+
+  }
+
+  /*响应式*/
+  @media (min-width: 720px) {
+    .sec-content{
+      .icons-content{
+        .icon-content{
+          .icon-content-item{
+            width:70px;
+            height:70px;
+            .iconfont{
+              color: white;
+              font-size:30px;
+              line-height: 70px;
+            }
+          }
+        }
+      }
+    }
+
+    .about-team{
+      .about-content{
+        .about-item{
+          .item-width {
+            width:90%;
+          .about-item-img {
+            .about-img {
+              border: 3px solid #bdbdbd;
+              height: 140px;
+              width: 140px;
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1080px) {
+    .sec-content{
+      .icons-content{
+        .icon-content{
+          .icon-content-item{
+            width:80px;
+            height:80px;
+            .iconfont{
+              color: white;
+              font-size:40px;
+              line-height: 80px;
+            }
+          }
+        }
+      }
+    }
+
+    .about-team{
+      .about-content{
+        .about-item{
+          .item-width {
+            width:80%;
+          .about-item-img {
+            .about-img {
+              border: 3px solid #bdbdbd;
+              height: 160px;
+              width: 160px;
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1366px) {
+    .sec-content{
+      .icons-content{
+        .icon-content{
+          .icon-content-item{
+            width:80px;
+            height:80px;
+            .iconfont{
+              color: white;
+              font-size:40px;
+              line-height: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1680px) {
+    .sec-content{
+      .icons-content{
+        .icon-content{
+          .icon-content-item{
+            width:100px;
+            height:100px;
+            .iconfont{
+              color: white;
+              font-size:50px;
+              line-height: 100px;
+            }
+          }
+        }
+      }
+    }
+
+
+    .about-team{
+      .about-content{
+        .about-item{
+          .item-width {
+            width:80%;
+          .about-item-img {
+            .about-img {
+              border: 3px solid #bdbdbd;
+              height: 180px;
+              width: 180px;
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .sec-content{
+      .icons-content{
+        .icon-content{
+          .icon-content-item{
+            width:100px;
+            height:100px;
+            .iconfont{
+              color: white;
+              font-size:50px;
+              line-height: 100px;
+            }
+          }
+        }
+      }
+    }
+    .about-team{
+      .about-content{
+        .about-item{
+          .item-width {
+            width:80%;
+            .about-item-img {
+              .about-img {
+                border: 5px solid #bdbdbd;
+                height: 200px;
+                width: 200px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

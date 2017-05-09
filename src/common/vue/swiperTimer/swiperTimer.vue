@@ -130,7 +130,7 @@
     height: 20px;
     line-height:20px;
     top:27px;
-    color:#444;
+    color:#ececec;
     opacity: 0;
   }
   #swiper-history .swiper-slide .date{

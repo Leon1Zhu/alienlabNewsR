@@ -21,7 +21,8 @@ global.NEWSTYPE=[
   {name:"科技",icon:"icon-keji",type:"keji"},
   {name:"财经",icon:"icon-caijing",type:"caijing"},
   ]
-
+global.ABOUTICON=[{icon:'icon-icon-yxj-newspaper',name:"报纸",explain:"平台为您提供国内各类主流报纸，种类繁多，通过分类查找更方便。"},{icon:'icon-remen',name:"热门",explain:"平台精选当下最新最热点的新闻资讯，及时掌握新闻热点。"},{icon:'icon-xingxing',name:"省心",explain:"搜索或查找自己喜欢的报纸，一键收藏，从此阅读查找更方便。"}];
+global.TEAM=[{img:'zl.jpg',name:"朱亮",post:"程序开发",abstruct:" 保持简单、自有健康的生活方式、在设计之外寻找灵感、努力为每一个项目带来简单、清晰、真实和恰当的感觉。"},{img:'secBackground.jpg',name:"赵刚",post:"程序开发",abstruct:" 保持简单、自有健康的生活方式、在设计之外寻找灵感、努力为每一个项目带来简单、清晰、真实和恰当的感觉。"},{img:'sf.png',name:"孙凤",post:"视觉设计",abstruct:" 保持简单、自有健康的生活方式、在设计之外寻找灵感、努力为每一个项目带来简单、清晰、真实和恰当的感觉。"}];
 global.ISLOGIN=false;
 global.USERINFO=[];
 
@@ -41,25 +42,18 @@ if(process.env.NODE_ENV=="production"){
 
 
 
-global.historyList=[{"detail":"Swiper中文网上线","date":"2014-11-21"},
-  {"detail":"Swiper3.x版本上线","date":"2015-02-01"},
-  {"detail":"Swiper交友群开通","date":"2015-02-26"},
-  {"detail":"Swiper3.0.4，图片延迟加载","date":"2015-03-06"},
-  {"detail":"Swiper资源论坛上线[<a href='http://bbs.swiper.com.cn' target='_blank'>下载资源</a>]","date":"2015-03-22"},
-  {"detail":"Swiper交友群扩容至1000人","date":"2015-07-27"},
-  {"detail":"Swiper3.2.0，响应式设置","date":"2015-11-07"},
-  {"detail":"Swiper3.3.0，导航条样式增加","date":"2016-01-10"},
-  {"detail":"网站升级为官方认证","date":"2016-05-27"},
-  {"detail":"Swiper3.4.0，变焦和历史状态","date":"2016-10-16"},
-  {"detail":"Swiper交友群人数达到2000","date":"2017-01-19"},
-  {"detail":"Swiper3.3.0，导航条样式增加","date":"2018-01-10"},
-  {"detail":"网站升级为官方认证","date":"2019-05-27"},
-  {"detail":"Swiper3.4.0，变焦和历史状态","date":"2020-10-16"},
-  {"detail":"Swiper交友群人数达到2000","date":"2021-01-19"},
-  {"detail":"Swiper3.3.0，导航条样式增加","date":"2022-01-10"},
-  {"detail":"网站升级为官方认证","date":"2023-05-27"},
-  {"detail":"Swiper3.4.0，变焦和历史状态","date":"2024-10-16"},
-  {"detail":"Swiper交友群人数达到2000","date":"2025-01-19"},
+global.historyList=[{"detail":"alienlab成立","date":"2015-07-01"},
+  {"detail":"第一个项目质控系统启动","date":"2015-07-15"},
+  {"detail":"质控系统完工","date":"2015-09-01"},
+  {"detail":"质控系统交付使用","date":"2015-09-15"},
+  {"detail":"参加软件杯基于html的报刊展示项目比赛","date":"2016-03-22"},
+  {"detail":"历时1个月，完成alienlabnews1.0系统","date":"2016-05-27"},
+  {"detail":"赛程圆满结束，荣获国家三等奖。","date":"2016-9-01"},
+  {"detail":"使用alienlabnews参加发明杯，荣获国家一等奖。","date":"2016-11-10"},
+  {"detail":"对项目进行进一步的完善，增加评论等功能。","date":"2016-12-27"},
+  {"detail":"技术准备完善，开始对项目的重构。","date":"2017-01-10"},
+  {"detail":"pc端准备结束，开始对项目的重构。","date":"2017-04-27"},
+  {"detail":"pc端一期开发完成。","date":"2017-05-18"},
 ];
 
 

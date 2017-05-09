@@ -4,8 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './common/css/reset.css'
-import iView from 'iview';
 import 'iview/dist/styles/iview.css';    // 使用 CSS
+import Input from 'iview';
+import Button from 'iview';
+import Progress from 'iview';
 import './filter'
 import './common/font/iconfont.css'
 import './common/css/style.scss'
@@ -21,8 +23,9 @@ Vue.prototype.$http = axios
 //typical import
 
 Vue.use(VueAwesomeSwiper)
-Vue.use(iView)
-
+Vue.use(Input)
+Vue.use(Button)
+Vue.use(Progress)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 // Alter defaults after instance has been created
