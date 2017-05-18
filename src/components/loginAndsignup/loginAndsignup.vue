@@ -18,6 +18,12 @@
               </div>
               <p id="notice2" class="hide">请先完成验证</p>
               <Checkbox class="rememberMe" v-model="rememberMe">记 住 我</Checkbox>
+
+              <div class="QQcontent">
+                其他账号登录：
+                <span id="qqLoginBtn"></span>
+              </div>
+
               <Button class="loginButton" shape="circle" type="info" long @click="Login">登&nbsp;&nbsp;陆</Button>
             </div>
             <div v-if="loginstatus=='signup'">
@@ -99,6 +105,40 @@
         Checkbox
       },
       mounted(){
+          var that =this;
+        QC.Login.signOut();
+        QC.Login({
+          btnId:"qqLoginBtn",    //插入按钮的节点id
+          size: "C_S"
+        }, function(reqData, opts){//登录成功
+          QC.Login.getMe(function(openId, accessToken){
+              console.log(reqData)
+            console.log(opts)
+            console.log(openId)
+            console.log(accessToken)
+            let nickanme=reqData.nickname
+            let imgurl = reqData.figureurl;
+            let loginname = openId;
+            let password = "123456";
+            let tel ="";
+            let email = "";
+            let resource = "1";
+            loginapi.regist(loginname,password,tel,email,imgurl,resource,nickanme).then((response) =>{
+                console.log(response)
+              setLoginInfo(response.data,false)
+              that.$router.go(0)
+            }).catch((response)=>{
+              console.log(response)
+              that.$Notice.error(setNoticConfig(response.message,null,null,""));
+            })
+
+          })
+
+          //根据返回数据，更换按钮显示状态方法
+          //QC.Login.signOut():注销登录
+        }, function(opts){//注销成功
+          //注销之后的方法
+        });
       },
       methods:{
         closeContent(){

@@ -9,6 +9,14 @@
   -ms-transform: translateY(-100%);
   -o-transform: translateY(-100%);
   transform: translateY(-100%);
+  .QQcontent{
+    float: right;
+    margin-top: 1%;
+  }
+  #qqLoginBtn{
+    position: relative;
+    top: 4px;
+  }
   #wait2 {
     text-align: left;
     color: #666;

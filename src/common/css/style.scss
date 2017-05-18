@@ -90,6 +90,41 @@ html,body,#app{
 .ivu-modal-footer,.ivu-modal-header{
   border:0px;
 }
+.vertical-center-modal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ivu-modal{
+    top: 0;
+  }
+}
+.show-paper .ivu-modal{
+  width: 100%!important;
+  height:100%;
+  position: relative;
+  .ivu-modal-content{
+    width:100%;
+    height:100%;
+    .ivu-icon-ios-close-empty{
+        color: white;
+      font-size:50px;
+      top: -10px;
+    }
+    .ivu-modal-body{
+      padding:0px;
+      width:100%;
+      height:100%;
+
+    }
+    .ivu-modal-footer{
+      display: none;
+    }
+    .ivu-modal-close{
+      z-index:10;
+    }
+  }
+}
 /*响应式*/
 @media (min-width:720px) {
   .font-size-maintitle{

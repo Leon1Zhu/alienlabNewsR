@@ -18,7 +18,8 @@
             <span class="header-login font-size-body">注册</span>
         </div>
         <div class="userInfo loginBtn"  v-if="loginflag">
-          <i class="iconfont  icon-xiaoren  font-size-title-icon" ></i>
+          <i class="iconfont  icon-xiaoren  font-size-title-icon"  v-if="userInfo.imgUrl == null || userInfo.imgUrl == ''"></i>
+          <img :src="userInfo.imgUrl" else style="margin-top: 20px;border-radius: 100%;position: relative;top: 5px;">
           <Poptip trigger="hover" title="提示标题"  placement="bottom">
             <span class="header-login font-size-body">{{userInfo.nickName}}</span>
             <div  slot="content" >

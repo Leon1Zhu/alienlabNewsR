@@ -42,3 +42,36 @@ Vue.prototype.$returnTopNewsList = function(){
   },300)
 }
 
+
+
+//去掉报纸背景图片并且添加默认的css
+Vue.prototype.$displayBackImg = function(){
+    console.log(222)
+    console.log(11111)
+    console.log( $(".swiper-slide iframe").contents().find("#page-container"))
+    $(".swiper-slide iframe").contents().find("#page-container").css("background-image","none");
+    $(".swiper-slide iframe").contents().find("#page-container #pf1").css({
+      "overflow": "hidden",
+      "-webkit-transition":" all 0.5s ease-in-out",
+      "-moz-transition":" all 0.5s ease-in-out",
+      "transition":" all 0.5s ease-in-out",
+      "-moz-transform-origin":"top left",
+      "-ms-transform-origin": "top left",
+      "transform-origin":"top left",
+      "-webkit-transform-origin":"top left"
+    });
+}
+
+//设置放大倍率
+Vue.prototype.$displayBackImg = function(scale){
+  if(scale==null || scale =="") scale = 1
+  $(".swiper-slide iframe").contents().find("#page-container #pf1").css({
+    "-webkit-transform": "scale("+scale+")",
+    "-moz-transform": "scale("+scale+")",
+    "-ms-transform":"scale("+scale+")",
+    "transform": "scale("+scale+")",
+  });
+}
+
+
+

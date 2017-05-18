@@ -7,12 +7,13 @@ import './common/css/reset.css'
 import 'iview/dist/styles/iview.css';    // 使用 CSS
 import Input from 'iview';
 import Button from 'iview';
+import Dropdown from 'iview';
 import Progress from 'iview';
 import './filter'
 import './common/font/iconfont.css'
 import './common/css/style.scss'
 import './globalFun'
-import store from './store/index'
+/*import store from './store/index'*/
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import './mainFun'
 import axios from 'axios'
@@ -25,6 +26,7 @@ Vue.prototype.$http = axios
 Vue.use(VueAwesomeSwiper)
 Vue.use(Input)
 Vue.use(Button)
+Vue.use(Dropdown)
 Vue.use(Progress)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
@@ -40,7 +42,7 @@ Vue.axios.post(tokenUrl,{}).then(function(response){
 function buildApp(){
   new Vue({
     router,
-    store,
+   /* store,*/
     created(){
 
     },

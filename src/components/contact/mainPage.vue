@@ -23,7 +23,7 @@
                 <i class="infoicon iconfont  icon-duanxin font-size-maintitle"></i><span class="infofont font-size-title">zgyxx091418@163.com</span>
               </div>
               <div class="address">
-                <i class="infoicon iconfont  icon-dizhi font-size-maintitle"></i><span class="infofont font-size-title">江苏省南京市栖霞区仙林大学城洋山北路1号</span>
+                <i class="infoicon iconfont  icon-dizhi font-size-maintitle"></i><span class="infofont font-size-title">江苏省南京市栖霞区仙林大学城羊山北路1号</span>
               </div>
             </div>
           </div>

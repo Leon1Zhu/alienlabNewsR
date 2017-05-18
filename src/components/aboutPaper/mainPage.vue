@@ -26,7 +26,7 @@
       <div class="about-team">
         <div class="icons-explain team-title font-size-title">我们的团队</div>
         <div class="icons-explain team-abstract font-size-minsup">这是一个年轻的充满朝气和活力的团队，青春与梦想在这里相互碰撞，摩擦出炫丽的火花。</div>
-        <div class="about-content">
+        <div class="about-content" v-if="team!=null && team!=''">
           <div class="about-item" v-for="item in team">
             <div class="item-width animateClass">
               <div class="about-item-img ">
@@ -71,7 +71,7 @@
         data(){
             return {
                 aboutIcon:ABOUTICON,
-              picUrl:PICURL,
+                picUrl:PICURL,
                 team:TEAM
             }
         },

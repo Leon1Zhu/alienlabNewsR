@@ -4,7 +4,7 @@
       <div class="swiper-content">
         <div class="news-card" v-for=" news in newsContent">
           <div class="news-top-content">
-            <div class="news-hover-bg" @click="watch(news)">
+            <div class="news-hover-bg" @click="watch(news,0)">
               <i class="iconfont  icon-yanjing1 font-size-title-icon"></i>
             </div>
             <img class="news-top-img" :src="picurl+news.picUrl" />
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-    <Modal v-model="modal2" width="360">
+    <Modal v-model="modal2" class-name="vertical-center-modal" width="360">
       <p slot="header" style="color:#f60;text-align:center">
         <Icon type="information-circled"></Icon>
         <span>操作确认</span>
@@ -45,9 +45,10 @@
         <p>确认取消对该报刊的收藏么？</p>
       </div>
       <div slot="footer">
-        <Button type="error" size="large" long :loading="modal_loading" @click="del">取消收藏</Button>
+        <Button type="error" size="large" long  @click="del">取消收藏</Button>
       </div>
     </Modal>
+    <showPaper  :ifshow="isshow" :newsId="newsId" :updateTime="updateTime"  v-on:close="closeCB"></showPaper>
   </div>
 </template>
 
@@ -55,6 +56,7 @@
   import './mainPageFouContent.scss'
   import '../mainPageThrContent/newsContent.scss'
   import collectapi from '../../../api/collect'
+  import showPaper from '../../watchPaper.vue'
   export default{
     props:['newsContent'],
     data(){
@@ -62,7 +64,13 @@
         picurl:PICURL,
         modal2:false,
         new:null,
+        isshow:false,
+        newsId:null,
+        updateTime:null,
       }
+    },
+    components: {
+        'showPaper':showPaper
     },
     computed:{
       islogin(){
@@ -74,9 +82,15 @@
     },
     methods:{
       watch(v,v2){
-         if(v.paperinfolist=="" || v.paperinfolist==null){
-           this.$Notice.warning(setNoticConfig("该报纸暂无期刊!",null,null,"info"));
-         }
+        if(v.paperinfolist=="" || v.paperinfolist==null){
+          this.$Notice.warning(setNoticConfig("该报纸暂无期刊!",null,null,"info"));
+        }
+        if(v2==0){
+          v2=(new Date()).Format("yyyy-MM-dd");
+        }
+        this.newsId=v.id;
+        this.updateTime=v2;
+        this.isshow = true;
       },
       del(){
         this.$emit('UncollectPaper',this.new)
@@ -91,6 +105,9 @@
           }else  if(this.new.isCollect==false){
             this.$emit('collectPaper',news)
           }
+      },
+      closeCB(){
+        this.isshow = false
       }
     }
 

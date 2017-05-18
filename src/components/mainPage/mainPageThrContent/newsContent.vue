@@ -37,7 +37,7 @@
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
-    <Modal v-model="modal2" width="360">
+    <Modal v-model="modal2" width="360" class-name="vertical-center-modal">
       <p slot="header" style="color:#f60;text-align:center">
         <Icon type="information-circled"></Icon>
         <span>操作确认</span>
@@ -46,7 +46,7 @@
         <p>确认取消对该报刊的收藏么？</p>
       </div>
       <div slot="footer">
-        <Button type="error" size="large" long :loading="modal_loading" @click="del">取消收藏</Button>
+        <Button type="error" size="large" long  @click="del">取消收藏</Button>
       </div>
     </Modal>
   </div>
